@@ -1,0 +1,41 @@
+
+.flip {
+  -webkit-perspective: 800;
+   width: 70em;
+   height: 40em;
+    position: center;
+    margin: 10em auto;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: center;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: Verdana;
+    font-size: 5em;
+    text-align: center;
+    line-height: 7.9em;
+}
+.flip .card .front {
+  position: fixed;
+  z-index: 1;
+    background: url("../img/3x5_Notecard.jpg");
+    color: black;
+    cursor: pointer;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+    background: url("../img/3x5_Notecard.jpg") no-repeat;
+
+
+}

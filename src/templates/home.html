@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock navbar-left %}
+
+{% block navbar-right %}
+          {% if not user.is_authenticated %}
+                <a class="btn btn-danger btn-lg" href="{% url 'accounts:login' %}" role="button">Log in</a>
+                <a class="btn btn-primary btn-lg" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+          {% else %}
+            {{ block.super }}
+          {% endif %}
+{% endblock navbar-right %}
+
+
+
+{% block container %}
+
+                <!-- <h1>{% include "_brandname.html" %}</h1> -->
+              <h1 class="myfont" style="font-size:5em;">Flashcards</h1>
+
+
+              <h2 style="line-height: 1.6">
+                <p class="myfont">Study Whenever.<br>
+                Copy and paste material to automatically create study cards.<br>
+                Just save the URL.<br> Bookmark. Email. Or share. <br>
+                </p>
+              </h2>
+              <div style="padding:2em;"></div>
+               <a class="btn-lg btn-success btn-primary" href="{% url 'deck:index' %}" role="button">Create Deck</a>
+
+{% endblock container %}
+
+
+

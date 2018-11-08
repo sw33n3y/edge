@@ -1,0 +1,17 @@
+{% extends "accounts/auth_base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block form_heading %}<a href="{% url 'home' %}">Sign Up </a>{% endblock %}
+
+{% block form %}
+  {% crispy form %}
+
+  <div class="form-message">
+    <p style="padding-top:1.5em;">
+      Already signed up? <a href="{% url 'accounts:login' %}">Log in</a>.
+    </p>
+  </div>
+{% endblock form %}
+

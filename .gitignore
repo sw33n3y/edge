@@ -1,0 +1,26 @@
+
+*.log
+*.pyc
+__pycache__/
+*.env
+*.swp
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Packaging files:
+*.egg*
+
+# database files:
+*.db
+*.sqlite3
+*.sqlite
+
+# Django stuff:
+*.mo
+*.pot
+
+# Windows
+Thumbs.db
+Desktop.ini
