@@ -5,9 +5,10 @@
 
 To set up a development environment quickly: 
 
-    1. `$ python3 -m venv [project_name]`
-    2. `$ . [project_name]/Scripts/activate.bat`  BASH: [project_name]/bin/activate
+    1. `$ python -m venv [project_name]`
+    2. `$ WIN: activate /Scripts/activate.bat`  BASH: ./[project_name]/bin/activate
     3.  pip install -r requirements.txt
+    4.  git clone *
 
 Run migrations:
 
